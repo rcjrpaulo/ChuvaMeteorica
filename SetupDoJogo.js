@@ -7,7 +7,7 @@ let regressor;
 let predicaoAtual = 0;
 
 // Buttons
-let leftButton, centerButton, rightButton, trainButton;
+let botaoPraEsquerda, botaoNaoMover, botaoPraDireita, trainButton;
 
 // Game variables
 let numDesvios;
@@ -37,21 +37,21 @@ function setup() {
     // Buttons
     const buttonDiv = select('#buttons');
     
-    leftButton = createButton('Mover para a esquerda');
-    leftButton.parent(buttonDiv);
-    leftButton.mouseClicked(() => {
+    botaoPraEsquerda = createButton('Mover para a esquerda');
+    botaoPraEsquerda.parent(buttonDiv);
+    botaoPraEsquerda.mouseClicked(() => {
         regressor.addImage(-1)
     });
     
-    centerButton = createButton('Sem movimento');
-    centerButton.parent(buttonDiv);
-    centerButton.mouseClicked(() => {
+    botaoNaoMover = createButton('Sem movimento');
+    botaoNaoMover.parent(buttonDiv);
+    botaoNaoMover.mouseClicked(() => {
         regressor.addImage(0)
     });
     
-    rightButton = createButton('Mover para a direita');
-    rightButton.parent(buttonDiv);
-    rightButton.mouseClicked(() => {
+    botaoPraDireita = createButton('Mover para a direita');
+    botaoPraDireita.parent(buttonDiv);
+    botaoPraDireita.mouseClicked(() => {
         regressor.addImage(1)
     });
 
