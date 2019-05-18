@@ -41,21 +41,21 @@ function setup() {
     botaoPraEsquerda.addClass('btn btn-primary');
     botaoPraEsquerda.parent(buttonDiv);
     botaoPraEsquerda.mouseClicked(() => {
-        regressor.addImage(-1)
+        for(var i = 0; i < 10; i++) regressor.addImage(-1)
     });
     
     botaoNaoMover = createButton('Sem movimento');
     botaoNaoMover.addClass('btn btn-primary');
     botaoNaoMover.parent(buttonDiv);
     botaoNaoMover.mouseClicked(() => {
-        regressor.addImage(0)
+        for(var i = 0; i < 10; i++) regressor.addImage(0)
     });
     
     botaoPraDireita = createButton('Mover para a direita');
     botaoPraDireita.addClass('btn btn-primary');
     botaoPraDireita.parent(buttonDiv);
     botaoPraDireita.mouseClicked(() => {
-        regressor.addImage(1)
+        for(var i = 0; i < 10; i++) regressor.addImage(1)
     });
 
     botaoTreino = createButton('Começar');
