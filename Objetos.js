@@ -57,7 +57,15 @@ class Meteoro {
             
             this.size = random(50, 120);
             this.position = createVector(random(this.size / 2, width - this.size / 2), -this.size);
-            this.velocity = createVector(random(-3, 3), random(1, 3));
+            let velocidadeX = random(-3, 3);
+            let velocidadeY = random(1, 3);
+            // Aqui incrementa a velocidade máxima final do meteoro conforme vai passando por meteoros
+            if (numDesvios > 9) {
+                let valorDinamicoVelocidadeMeteoro = 3+(numDesvios/10);
+                velocidadeX = random(-3, valorDinamicoVelocidadeMeteoro);
+                velocidadeY = random(1, valorDinamicoVelocidadeMeteoro);
+            }
+            this.velocity = createVector(velocidadeX, velocidadeY);
         }
     }
 
