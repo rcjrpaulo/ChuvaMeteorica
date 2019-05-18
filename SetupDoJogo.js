@@ -38,24 +38,28 @@ function setup() {
     const buttonDiv = select('#buttons');
     
     botaoPraEsquerda = createButton('Mover para a esquerda');
+    botaoPraEsquerda.addClass('btn btn-primary');
     botaoPraEsquerda.parent(buttonDiv);
     botaoPraEsquerda.mouseClicked(() => {
         regressor.addImage(-1)
     });
     
     botaoNaoMover = createButton('Sem movimento');
+    botaoNaoMover.addClass('btn btn-primary');
     botaoNaoMover.parent(buttonDiv);
     botaoNaoMover.mouseClicked(() => {
         regressor.addImage(0)
     });
     
     botaoPraDireita = createButton('Mover para a direita');
+    botaoPraDireita.addClass('btn btn-primary');
     botaoPraDireita.parent(buttonDiv);
     botaoPraDireita.mouseClicked(() => {
         regressor.addImage(1)
     });
 
     botaoTreino = createButton('Começar');
+    botaoTreino.addClass('btn btn-primary');
     select('#train').child(botaoTreino);
     botaoTreino.mouseClicked(() => {
         select('#info').html('Carregando... Por favor, aguarde');
