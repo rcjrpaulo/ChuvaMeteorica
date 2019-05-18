@@ -1,4 +1,4 @@
-// Game state variable: Training 0, Game 1, Game over 2
+// variável game state: Treinando 0, No jogo 1, Fim do jogo 2
 let gameState = 0;
 
 // Input da Webcam e  modelo de regressao
@@ -6,10 +6,10 @@ let video;
 let regressor;
 let predicaoAtual = 0;
 
-// Buttons
-let botaoPraEsquerda, botaoNaoMover, botaoPraDireita, trainButton;
+// Botões
+let botaoPraEsquerda, botaoNaoMover, botaoPraDireita, botaoTreino;
 
-// Game variables
+// Variáveis do jogo
 let numDesvios;
 let maiorPontuacao = 0;
 let nave, meteoros, estrelas;
@@ -26,7 +26,7 @@ function setup() {
     });
     video.hide();
 
-    // Load model
+    // Carrega models
     const mobileNet = ml5.featureExtractor('MobileNet', () => {
         console.log('MobileNet carregou');
     });
@@ -34,7 +34,7 @@ function setup() {
         console.log('Modelo carregou');
     })
 
-    // Buttons
+    // Botões
     const buttonDiv = select('#buttons');
     
     botaoPraEsquerda = createButton('Mover para a esquerda');
@@ -55,9 +55,9 @@ function setup() {
         regressor.addImage(1)
     });
 
-    trainButton = createButton('Começar');
-    select('#train').child(trainButton);
-    trainButton.mouseClicked(() => {
+    botaoTreino = createButton('Começar');
+    select('#train').child(botaoTreino);
+    botaoTreino.mouseClicked(() => {
         select('#info').html('Carregando... Por favor, aguarde');
         regressor.train((loss) => {
             if (loss === null) {

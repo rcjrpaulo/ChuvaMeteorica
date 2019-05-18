@@ -11,8 +11,8 @@ function gameOver() {
     nave.exibir();
     
     // Desenha meteoros
-    meteoros.forEach((meteor) => {
-        meteor.exibir();
+    meteoros.forEach((meteoro) => {
+        meteoro.exibir();
     });
     
     textAlign(CENTER);
