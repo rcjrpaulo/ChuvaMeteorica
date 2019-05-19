@@ -37,8 +37,8 @@ class Meteoro {
     }
 
     exibir() {
-        fill(200, 150, 100);
-        stroke(180, 120, 80);
+        fill(100, 100, 100);
+        stroke(50, 50, 50);
         strokeWeight(10);
         ellipse(this.position.x, this.position.y, this.size);
     }
