@@ -15,9 +15,11 @@ class Nave {
         ellipse(this.position, height - this.size, this.size);
         noStroke();
         fill(130, 230, 255);
+        stroke(0, 0, 0);
+        strokeWeight(1);
         ellipse(this.position - this.size * 0.2, height - this.size * 1.2, this.size * 0.3);
-        fill(130, 230, 255);
-        ellipse(this.position - this.size * 0.2, height - this.size * 1.2, this.size * 0.2);
+        // fill(130, 230, 255);
+        // ellipse(this.position - this.size * 0.2, height - this.size * 1.2, this.size * 0.2);
     }
 
     atualizar() {
