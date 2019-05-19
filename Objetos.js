@@ -11,12 +11,12 @@ class Nave {
     exibir() {
         stroke(20);
         strokeWeight(4);
-        fill(255, 0, 0);
+        fill(255, 255, 255);
         ellipse(this.position, height - this.size, this.size);
         noStroke();
-        fill(255, 120, 120);
+        fill(130, 230, 255);
         ellipse(this.position - this.size * 0.2, height - this.size * 1.2, this.size * 0.3);
-        fill(255);
+        fill(130, 230, 255);
         ellipse(this.position - this.size * 0.2, height - this.size * 1.2, this.size * 0.2);
     }
 
@@ -37,8 +37,8 @@ class Meteoro {
     }
 
     exibir() {
-        fill(100, 100, 100);
-        stroke(50, 50, 50);
+        fill(180, 180, 180);
+        stroke(120, 120, 120);
         strokeWeight(10);
         ellipse(this.position.x, this.position.y, this.size);
     }
